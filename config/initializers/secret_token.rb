@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PiratenHe::Application.config.secret_token = '3d7a6d8e1910bdf68a5dc9d4e2129ea09da66de0f54a9d0ea7b48d0472e3c93f3007541a1a78ea740accc79dccb49d47c64f2da4ccc4e703cf5356edc01eae81'
+PiratenHe::Application.config.secret_token = '47d2e638d603b0934730e98c9b62b8ec124f41bb158d46113a655eaa0bb3df5a0dfdc977b99535168b2048b71b732de5c005c9444e0560384fe9dd16a686658d'

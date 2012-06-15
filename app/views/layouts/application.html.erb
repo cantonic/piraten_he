@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>PiratenHe</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
-<%= yield %>
+      <header id="header">
+        <%= render '/refinery/header' -%>
+      </header>
 
-</body>
+      <div id="page_container" class="container">
+        <section id="page">
+          <%= yield %>
+        </section>
+        <footer>
+          <%= render '/refinery/footer' -%>
+        </footer>
+      </div>
+    </div>
+    <%= render '/refinery/javascripts' %>
+  </body>
 </html>
+
